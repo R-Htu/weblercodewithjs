@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webler Codes – Home</title>
+  <meta name="description" content="Webler – Learn software engineering, coding, and community discussion.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--  (⊙_⊙)⊃━☆ ⊃━☆ Header -->
+  <header class="wb-home-header">
+    <div class="logo">
+      <a href="/">
+        <img src="https://i.ibb.co/bgw03TLp/weblerlogo2.png" alt="Webler logo" />
+      </a>
+    </div>
+
+    <div class="right-side" id="rightSide">
+      <nav class="nav-links">
+        <a href="/Courses">Courses</a>
+        <a href="/Codes">Codes</a>
+        <a href="/Discuss">Discuss</a>
+        <a href="/Feed">Feed</a>
+        <a href="/Tools" id="toolsLink">Tools</a>
+      </nav>
+
+      <div class="auth-actions wb-home-auth-nav">
+        <div class="login-buttons" id="authButtons">
+          <button class="btn" type="button" id="showLoginBtn">Log in</button>
+          <button class="btn" type="button" id="showRegisterBtn">Register</button>
+        </div>
+        <button class="profile-button" id="profileButton" style="display:none" title="Profile">
+          <img id="avatarImg" alt="User profile avatar" width="36" height="36" />
+        </button>
+      </div>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- (⊃•_•)⊃︻デ═☆ Main -->
+  <main>
+    <!-- (ಠ_ಠ)︻デ◎ Banner -->
+    <div class="wb-banner">
+      <div class="particles" id="particles"></div>
+      <div class="wb-banner__logo">
+        <img class="wb-banner__logo__img" src="https://i.ibb.co/G3V38QM7/weblerlogowithpuppleblue.png" alt="Webler banner logo" />
+      </div>
+      <h1 class="wb-banner__text">Software Engineering</h1>
+      <hr />
+      <p class="wb-banner__slogan">- Building the future, one code at a time</p>
+    </div>
+
+    <!-- (⊙_⊙)︻デ☢ Features Section -->
+    <section class="wb-home-content">
+      <h2 class="wb-home-section-title">Explore Features</h2>
+      <div class="wb-home-cards">
+        <div class="wb-home-card">
+          <h3 class="wb-home-card-title">Playground</h3>
+          <p class="wb-home-card-text">Create, edit, and run code in multiple programming languages — all within your browser. Our web-based IDE is perfect for testing ideas, learning syntax, or building small projects without any setup.</p>
+          <a href="/Codes" class="wb-home-card-button">Go to Playground</a>
+        </div>
+        <div class="wb-home-card">
+          <h3 class="wb-home-card-title">Community Feed</h3>
+          <p class="wb-home-card-text">Stay connected with the Webler community! The Feed lets you see the latest project updates, shared snippets, discussions, and highlights from developers around the world.</p>
+          <a href="/Feed" class="wb-home-card-button">Check Feed</a>
+        </div>
+        <div class="wb-home-card">
+          <h3 class="wb-home-card-title">Courses</h3>
+          <p class="wb-home-card-text">Learn by doing with our interactive courses! Each one includes hands-on content, quizzes, and coding tasks to help you master web technologies, programming languages, and software tools at your own pace.</p>
+          <a href="/Courses" class="wb-home-card-button">Explore Courses</a>
+        </div>
+        <div class="wb-home-card">
+          <h3 class="wb-home-card-title">Q&A Forum</h3>
+          <p class="wb-home-card-text">Have a question about code or tech? Join our community-driven forum to ask, answer, and explore real-world programming problems. It’s a place to learn, share knowledge, and grow together.</p>
+          <a href="/Discuss" class="wb-home-card-button">Visit Forum</a>
+        </div>
+      </div>
+
+      <!--(•_•)︻デ○ Sign up / Sign in -->
+      <div class="wb-home-sign-up" id="join">
+        <div class="wb-home-sign-up-form">
+
+
+          <!-- (>_<)︻デ◆ Register Form -->
+          <div class="wb-home-register" id="registerForm">
+            <h1 class="wb-home-register__title">Sign Up</h1>
+            <div class="wb-home-register__alert" id="registerError" style="display:none"></div>
+            <form class="wb-home-register__form" id="registerFormEl" method="post">
+              <label for="regEmail">Email</label>
+              <input class="wb-home-register__input" type="email" placeholder="example@email.com"  required id="regEmail" />
+
+              <label for="regName">Name</label>
+              <input class="wb-home-register__input" type="text" placeholder="Won Bin" minlength="3" maxlength="20" required id="regName" />
+
+              <label for="regPassword">Password</label>
+              <input class="wb-home-register__input" type="password"  required id="regPassword" />
+
+              <label for="regSolution">Enter captcha shown in image</label>
+              <input class="wb-home-register__input" type="text" required id="regSolution" />
+
+              <div class="wb-home-register__captcha">
+               <!--<img id="captchaImg" alt="Captcha challenge" />-->
+                <button type="button" id="refreshCaptcha" class="wb-home-register__captcha-refresh" disabled>⟳</button>
+              </div>
+
+              <button type="submit" id="registerSubmit" class="wb-home-register__submit">Sign Up</button>
+            </form>
+                       <p class="wb-home-register__text">
+                Already have an account?{" "}
+                <button class="wb-home-register__link" type="button" onclick="showRegisterForm()">Sign In</button>
+            </p>
+
+            <p class="wb-home-register__text">
+                By signing up you agree to our <a href="/Terms-of-use">Terms of Use</a>
+            </p>
+          </div>
+
+          <!-- (⌐■_■)︻デ● Login Form -->
+        <div class="wb-home-register wb-home-login" id="loginForm" style="display:none">
+            <h1 class="wb-home-register__title">Sign In</h1>
+            <div class="wb-home-register__alert" id="loginError" style="display:none"></div>
+            <form id="loginFormEl" class="wb-home-register__form" method="post">
+                <label for="loginEmail">Email</label>
+                <input class="wb-home-register__input" type="email" required id="loginEmail" />
+
+                <label for="loginPassword">Password</label>
+                <input class="wb-home-register__input" type="password" required id="loginPassword" />
+
+                <button type="submit" id="loginSubmit" class="wb-home-register__submit">Sign Up</button>
+            </form>
+        </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ( •_•)>⌐■-■︻デ═一 Footer -->
+ <footer class="wb-home-footer">
+  <canvas class="footer-particles" id="footerCanvas"></canvas>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/Contact">Contact</a>
+    <a href="/Terms-of-use">Terms of Use</a>
+  </div>
+  <div class="wb-made-by">
+    Made with <span class="red-heart">❤</span> by <b>Webler</b>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
