@@ -1,3 +1,4 @@
+alert('It might take a while to upload the photo background ')
 // ( -_•)︻デ═一 Header menu toggle
 const hamburger = document.getElementById('hamburger');
 const rightSide = document.getElementById('rightSide');
