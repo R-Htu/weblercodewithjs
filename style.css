@@ -1,3 +1,4 @@
+
 /* ================= Base Reset ================= */
 *,
 *::before,
@@ -106,7 +107,12 @@ body {
     url("https://i.ibb.co/20bWfw9B/Copy-of-Blue-Modern-Futuristic-Technology-Presentation.jpg");
   --form-bg: rgba(128, 127, 131, 0.9);
   --form-color: #2a2a66;
-  --input-bg: #a7abb1;
+  --input-bg: #c6d0dd;
+  --input-shadow-dark: inset 6px 6px 12px rgba(150, 150, 200, 0.3);
+  --input-shadow-light: inset -6px -6px 12px rgba(255, 255, 255, 0.7);
+  --captcha-btn-bg: #dfdff1;
+  --captcha-btn-shadow-dark: 4px 4px 8px rgba(170, 170, 179, 0.3);
+  --captcha-btn-shadow-light: -4px -4px 8px rgba(133, 122, 149, 0.2);
   --submit-bg: linear-gradient(145deg, #7e7ea5, #2b2d2d);
   --submit-color: #111;
   --link-color: #210c5c;
@@ -151,13 +157,15 @@ body.dark {
     url("https://i.ibb.co/kVSx5r53/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-6.png");
   --form-bg: rgba(1, 1, 12, 0.5);
   --form-color: #e0e0f0;
-  --input-bg: rgba(97, 98, 98, 0.4);
-    --captcha-btn-bg: #dfdff1; 
-  --captcha-btn-shadow-dark: 4px 4px 8px rgba(170, 170, 179, 0.3);
-  --captcha-btn-shadow-light: -4px -4px 8px rgba(133, 122, 149, 0.2);
-  --submit-bg: linear-gradient(145deg, #00c6ff, #0072ff);
+  --input-bg: #49495a;
+  --input-shadow-dark: inset 6px 6px 12px rgba(0, 0, 0, 0.5);
+  --input-shadow-light: inset -6px -6px 12px rgba(100, 100, 150, 0.2);
+  --captcha-btn-bg:  #49495a;
+  --captcha-btn-shadow-dark: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  --captcha-btn-shadow-light: -4px -4px 8px rgba(255, 255, 255, 0.1);
+  --submit-bg: linear-gradient(145deg, #201042, #412567);
   --submit-color: #fff;
-  --link-color: #79c7ff;
+  --link-color: #2c096c;
   --footer-bg: linear-gradient(135deg, rgba(0, 17, 17, 0.8), rgba(1, 7, 14, 0.99)),
     url("https://i.ibb.co/fd970qyX/Blue-Modern-Futuristic-Technology-Presentation.jpg");
   --footer-link-color: #c2c2c7;
@@ -1028,8 +1036,8 @@ body.dark {
   padding: 0.75rem 1rem;
   border-radius: 12px;
   border: none;
-  background: #c6d0dd;
-  box-shadow: inset 6px 6px 12px rgba(150, 150, 200, 0.3), inset -6px -6px 12px rgba(255, 255, 255, 0.7);
+  background: var(--input-bg);
+  box-shadow: var(--input-shadow-dark), var(--input-shadow-light);
   font-size: 1rem;
   width: 100%;
   color: inherit;
@@ -1051,11 +1059,20 @@ body.dark {
   height: 35px;
   border-radius: 50%;
   border: none;
-  background: var(--form-bg);
-  box-shadow: 4px 4px 8px var(--captcha-btn-shadow-light), 
-              -4px -4px 8px var(--captcha-btn-shadow-dark);
+  background: var(--captcha-btn-bg);
+  box-shadow: 
+    var(--captcha-btn-shadow-dark),
+    var(--captcha-btn-shadow-light);
   cursor: pointer;
   font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.wb-home-register__captcha-refresh:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    6px 6px 12px var(--captcha-btn-shadow-dark),
+    -6px -6px 12px var(--captcha-btn-shadow-light);
 }
 
 /* 🔹 Submit */
@@ -1128,6 +1145,10 @@ body.dark {
 
   .wb-home-register__title {
     font-size: 1.5rem;
+  }
+
+  .wb-home-register__captcha img {
+    height: 50px;
   }
 
   .wb-home-register__submit {
@@ -1222,9 +1243,9 @@ body.dark {
 
 .red-heart {
   margin: 0 0.2rem;
-  color: var(--heart-color);
+  color: red;
+  font-size: 1.3rem;
   vertical-align: middle;
-  text-shadow: var(--heart-shadow);
+  text-shadow: 2px 2px 5px blue;
   animation: heartbeat 1.3s infinite;
-  transition: transform 0.3s ease;
 }

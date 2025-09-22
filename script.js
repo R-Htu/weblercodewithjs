@@ -82,14 +82,14 @@ function resize() {
 resize();
 window.addEventListener('resize', resize);
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 40; i++) {
   particles.push({
     x: Math.random() * canvas.clientWidth,
     y: Math.random() * canvas.clientHeight,
     r: Math.random() * 3 + 1,
     dx: (Math.random() - 0.5) * 0.6,
     dy: (Math.random() - 0.5) * 0.6,
-    color:` hsla(${Math.random() * 360}, 70%, 70%, 0.3)`
+    color:` hsla(${Math.random() * 360}, 70%, 70%, 0.1)`
   });
 }
 
