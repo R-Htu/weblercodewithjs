@@ -801,14 +801,15 @@ body.dark {
     }
 
     .wb-banner__quiz__img.duplicate {
-        top: calc(78% + 10px);
-        right: calc(45% - 10px);
+        top: calc(83% + 10px);
+        right: calc(42% - 10px);
     }
 
     .wb-banner__quiz__img {
-        top: 78%;
-        right: 45%;
+        top: 83%;
+        right: 42%;
     }
+
 
     .wb-banner__code__img.duplicate {
         top: calc(60% + 10px);
@@ -848,14 +849,7 @@ body.dark {
   font-size: 2.5rem;
   margin: 0 0 7vmin 0;
   font-weight: 600;
-  background: linear-gradient(
-    270deg,
-    #07934b,
-    #6a5acd,
-    #00c9ff,
-    #92fe9d,
-    #224528
-  );
+  background: var(--form-color);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1087,6 +1081,55 @@ body.dark {
   font-weight: 700;
   cursor: pointer;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .wb-home-sign-up {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .wb-home-register__title {
+    font-size: 1.75rem;
+  }
+
+  .wb-home-register__input,
+  .wb-home-register__input-password {
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+  }
+
+  .wb-home-register__submit {
+    padding: 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  .form-p {
+    font-size: 4.5vmin;
+    margin-bottom: 3vmin;
+  }
+}
+
+@media (max-width: 480px) {
+  .wb-home-register {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .wb-home-register__title {
+    font-size: 1.5rem;
+  }
+
+  .wb-home-register__submit {
+    padding: 0.55rem;
+    font-size: 0.9rem;
+  }
+
+  .form-p {
+    font-size: 4vmin;
+    margin-bottom: 2.5vmin;
+  }
 }
 
 

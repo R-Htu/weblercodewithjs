@@ -1,4 +1,4 @@
-alert('It might take a while to upload the photo background ')
+
 // ( -_•)︻デ═一 Header menu toggle
 const hamburger = document.getElementById('hamburger');
 const rightSide = document.getElementById('rightSide');
@@ -82,14 +82,14 @@ function resize() {
 resize();
 window.addEventListener('resize', resize);
 
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 50; i++) {
   particles.push({
     x: Math.random() * canvas.clientWidth,
     y: Math.random() * canvas.clientHeight,
     r: Math.random() * 3 + 1,
     dx: (Math.random() - 0.5) * 0.6,
     dy: (Math.random() - 0.5) * 0.6,
-    color:` hsla(${Math.random() * 360}, 100%, 70%, 0.8)`
+    color:` hsla(${Math.random() * 360}, 70%, 70%, 0.3)`
   });
 }
 
@@ -111,20 +111,20 @@ function animate() {
 }
 animate();
 
-// Select the toggle button
+
 const darkModeToggle = document.getElementById('darkModeToggle');
 
-// Check if dark mode was previously set in localStorage
+
 if (localStorage.getItem('darkMode') === 'enabled') {
   document.body.classList.add('dark');
   darkModeToggle.textContent = '☀';
 }
 
-// Toggle dark mode on click
+
 darkModeToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 
-  // Update button icon
+
   if (document.body.classList.contains('dark')) {
     darkModeToggle.textContent = '☀';
     localStorage.setItem('darkMode', 'enabled');
