@@ -151,7 +151,10 @@ body.dark {
     url("https://i.ibb.co/kVSx5r53/Copy-of-Blue-Modern-Futuristic-Technology-Presentation-6.png");
   --form-bg: rgba(1, 1, 12, 0.5);
   --form-color: #e0e0f0;
-  --input-bg: rgba(220, 240, 240, 0.4);
+  --input-bg: rgba(97, 98, 98, 0.4);
+    --captcha-btn-bg: #dfdff1; 
+  --captcha-btn-shadow-dark: 4px 4px 8px rgba(170, 170, 179, 0.3);
+  --captcha-btn-shadow-light: -4px -4px 8px rgba(133, 122, 149, 0.2);
   --submit-bg: linear-gradient(145deg, #00c6ff, #0072ff);
   --submit-color: #fff;
   --link-color: #79c7ff;
@@ -1019,9 +1022,8 @@ body.dark {
   padding: 0.75rem 1rem;
   border-radius: 12px;
   border: none;
-  background: var(--input-bg);
-  box-shadow: inset 6px 6px 12px var(--input-shadow-dark), 
-              inset -6px -6px 12px var(--input-shadow-light);
+  background: #c6d0dd;
+  box-shadow: inset 6px 6px 12px rgba(150, 150, 200, 0.3), inset -6px -6px 12px rgba(255, 255, 255, 0.7);
   font-size: 1rem;
   width: 100%;
   color: inherit;
@@ -1043,9 +1045,9 @@ body.dark {
   height: 35px;
   border-radius: 50%;
   border: none;
-  background: var(--captcha-btn-bg);
-  box-shadow: 4px 4px 8px var(--captcha-btn-shadow-dark), 
-              -4px -4px 8px var(--captcha-btn-shadow-light);
+  background: var(--form-bg);
+  box-shadow: 4px 4px 8px var(--captcha-btn-shadow-light), 
+              -4px -4px 8px var(--captcha-btn-shadow-dark);
   cursor: pointer;
   font-weight: bold;
 }
@@ -1087,7 +1089,7 @@ body.dark {
   .wb-home-sign-up {
     flex-direction: column;
     padding: 2rem 1rem;
-    gap: 1.5rem;
+
   }
 
   .wb-home-register__title {
@@ -1097,7 +1099,8 @@ body.dark {
   .wb-home-register__input,
   .wb-home-register__input-password {
     font-size: 0.95rem;
-    padding: 0.65rem 0.9rem;
+    padding:1vmin 3vmin;
+    border-radius: 7px;
   }
 
   .wb-home-register__submit {
@@ -1113,8 +1116,8 @@ body.dark {
 
 @media (max-width: 480px) {
   .wb-home-register {
-    padding: 1.5rem;
-    border-radius: 1.5rem;
+    padding: 1.7rem;
+    border-radius: 1.2rem;
   }
 
   .wb-home-register__title {
