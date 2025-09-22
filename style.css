@@ -906,6 +906,12 @@ body.dark {
     -12px -12px 20px rgba(62, 61, 88, 0.7);
 }
 
+@media (max-width:460px) {
+  .wb-home-cards {
+    grid-template-columns: repeat(1, minmax(280px, 300px));
+
+}
+}
 /* ================= Card Title & Text ================= */
 .wb-home-card-title {
   text-align: center;
