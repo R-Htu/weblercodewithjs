@@ -110,3 +110,27 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
+// Select the toggle button
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Check if dark mode was previously set in localStorage
+if (localStorage.getItem('darkMode') === 'enabled') {
+  document.body.classList.add('dark');
+  darkModeToggle.textContent = '☀';
+}
+
+// Toggle dark mode on click
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+
+  // Update button icon
+  if (document.body.classList.contains('dark')) {
+    darkModeToggle.textContent = '☀';
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    darkModeToggle.textContent = '☾';
+    localStorage.setItem('darkMode', 'disabled');
+  }
+});
+

@@ -11,6 +11,9 @@
 <body>
   <!--  (⊙_⊙)⊃━☆ ⊃━☆ Header -->
   <header class="wb-home-header">
+    <!-- 🌙 Dark mode toggle button -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">☾</button>
+
     <div class="logo">
       <a href="/">
         <img src="https://i.ibb.co/bgw03TLp/weblerlogo2.png" alt="Webler logo" />
@@ -51,9 +54,10 @@
       <div class="particles" id="particles"></div>
         <div class="wb-banner__content">
             <div class="wb-banner__logo">
-              <img class="wb-banner__logo__img" src="https://i.ibb.co/TqMYX9QQ/wblogocorrection.png" alt="logo" />
+              <img class="wb-banner__logo__img" src="https://i.ibb.co/d02XhwzH/weblerlogocropwithwhitepupple.png" alt="logo" />
             </div>
             <h1 class="wb-banner__text">Software Engineering</h1>
+            <hr>
             <p class="wb-banner__slogan">-Building the future, one code at a time</p>
         </div> 
       </div>
@@ -124,8 +128,8 @@
       <!--(•_•)︻デ○ Sign up / Sign in -->
       <div class="wb-home-sign-up" id="join">
         <div class="wb-home-sign-up-form">
-
-
+              <p class="form-p">Join us right now!</p>
+      
           <!-- (>_<)︻デ◆ Register Form -->
           <div class="wb-home-register" id="registerForm">
             <h1 class="wb-home-register__title">Sign Up</h1>
@@ -166,7 +170,7 @@
             <div class="wb-home-register__alert" id="loginError" style="display:none"></div>
             <form id="loginFormEl" class="wb-home-register__form" method="post">
                 <label for="loginEmail">Email</label>
-                <input class="wb-home-register__input" type="email" required id="loginEmail" />
+                <input class="wb-home-register__input"  type="email" required id="loginEmail" />
 
                 <label for="loginPassword">Password</label>
                 <input class="wb-home-register__input" type="password" required id="loginPassword" />
