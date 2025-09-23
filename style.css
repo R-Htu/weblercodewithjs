@@ -113,7 +113,7 @@ body {
   --home-card-btn-bg-dark: #22263a;
   --home-card-btn-text-dark: #f0f0ff;
 
- /* --section-bg: linear-gradient(135deg, rgba(120, 116, 136, 0.55), rgba(44, 100, 106, 0.55));*/
+  --section-bg: linear-gradient(135deg, rgba(28, 31, 40, 0.55), rgba(102, 117, 169, 0.55));
   --form-bg: rgba(128, 127, 131, 0.9);
   --form-color: #2a2a66;
   --input-bg: #c6d0dd;
@@ -929,7 +929,7 @@ body.dark {
 
 @media (max-width:460px) {
   .wb-home-cards {
-	grid-template-columns: repeat(1, minmax(280px, 300px));
+	grid-template-columns: repeat(1, minmax(400px, 450px));
 
 }
 }
@@ -984,7 +984,7 @@ body.dark {
    Join Us Section 
 ======================== */
 
-/* 🔹 Section Layout */
+/*  Section Layout */
 .wb-home-sign-up {
   margin-top: 4rem; 
   display: flex;
@@ -1002,22 +1002,21 @@ body.dark {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0;   /* small space */
+  gap: 0; 
 }
 
 .form-p {
   font-weight: 700;
   font-size: clamp(24px, 2vmin, 18px);
   color: var(--form-color);
-  writing-mode: vertical-rl;  /* vertical text */
+  writing-mode: vertical-rl;  
   text-orientation: mixed;
   margin-right: 0.5rem;
   flex-shrink: 0;
 }
 
 
-
-/* 🔹 Form Card */
+/* Form Card */
 .wb-home-register {
   background: var(--form-bg);
   padding: 2rem;
@@ -1036,7 +1035,7 @@ body.dark {
   margin-bottom: 1.5rem;
 }
 
-/* 🔹 Alert */
+/*  Alert */
 .wb-home-register__alert {
   background: rgba(255, 100, 100, 0.2);
   color: #ff3333;
@@ -1046,7 +1045,7 @@ body.dark {
   text-align: center;
 }
 
-/* 🔹 Inputs */
+/* Inputs */
 .wb-home-register__form {
   display: flex;
   flex-direction: column;
@@ -1065,7 +1064,7 @@ body.dark {
   color: inherit;
 }
 
-/* 🔹 Captcha */
+/*  Captcha */
 .wb-home-register__captcha {
   display: flex;
   align-items: center;
@@ -1097,7 +1096,7 @@ body.dark {
 	-6px -6px 12px var(--captcha-btn-shadow-light);
 }
 
-/* 🔹 Submit */
+/* Submit */
 .wb-home-register__submit {
   padding: 0.75rem;
   border-radius: 15px;
@@ -1115,7 +1114,7 @@ body.dark {
 			  -6px -6px 12px rgba(200, 255, 255, 0.7);
 }
 
-/* 🔹 Extra Links */
+/* Extra Links */
 .wb-home-register__text {
   text-align: center;
   margin-top: 1rem;
@@ -1154,22 +1153,28 @@ body.dark {
   }
 
   .form-p {
-	font-size: 4.5vmin;
-	margin-bottom: 3vmin;
+    font-size: 4.5vmin;
+    margin-bottom: 3vmin;
   }
 }
 
 @media (max-width: 480px) {
   .wb-home-register {
-	padding: 1.7rem;
-	border-radius: 1.2rem;
+    padding: 1.7rem;
+    border-radius: 2vmin;
+  }
+
+  .wb-home-register__text {
+    text-align: center;
+    margin-top:2vmin ;
+    font-size: 3vmin;
   }
   
   .wb-home-register__input,
   .wb-home-register__input-password {
-	font-size: 0.95rem;
-	padding:2vmin 1vmin;
-	border-radius: 7px;
+    font-size: 0.95rem;
+    padding: 0.3rem 0.3rem;
+    border-radius: 7px;
   }
 
   .wb-home-register__title {
@@ -1177,9 +1182,9 @@ body.dark {
   }
 
   .wb-home-register__submit {
-	padding: 0.55rem;
+	padding: 0.3rem 0.3rem;
 	font-size: 0.9rem;
-	border-radius:3px;
+	border-radius:2vmin;
   }
 
   .form-p {
@@ -1197,7 +1202,7 @@ body.dark {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  padding:1vmin 0;
+  padding:3vmin 0 2vmin 0;
   background:var(--footer-bg);
   background-size: cover;
   background-position: start;
@@ -1237,7 +1242,7 @@ body.dark {
   position: relative;
   z-index: 1;
   padding: 0.3vmin 0.5vmin;
-  font-weight: 500;
+  
 }
 
 .wb-home-footer a:hover {
@@ -1256,9 +1261,10 @@ body.dark {
 }
 
 .wb-made-by b {
-  background: blue;
+  background:var(--nav-link-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 6vmin;
 }
 
 
