@@ -53,8 +53,10 @@ body {
   radial-gradient(
     circle at center,
     rgba(60, 60, 255, 0.2),  
-    rgba(25, 25, 25, 0.9),    
-    rgba(0, 0, 0, 0.6)
+    rgba(25, 25, 25, 0.9),  
+    rgba(0, 0, 0, 0.6)90%,
+    rgba(0, 0, 0, 0.99)
+
   ),
   url("https://i.ibb.co/PvgwpCK5/finallbg.png");
 
@@ -507,7 +509,7 @@ body.dark {
     background: var(--banner-bg-dark);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: start;
 }
 /* Logo & Banner Text */
 
@@ -743,8 +745,24 @@ body.dark {
 
 @media (max-width:480px) {
 
+  .dark .wb-banner::before {
+    background:radial-gradient(
+    circle at center,
+    rgba(0, 0, 15, 0.9),  
+    rgba(25, 25, 25, 0.9),  
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.99)
+
+  ),
+  url("https://i.ibb.co/PvgwpCK5/finallbg.png");
+  background-size: cover;
+  background-repeat: no-repeat
+
+;
+  }
+
 	.wb-banner__content{
-		top: 20%;
+		top: 9%;
     position: absolute;
     height: 50%;
     left: 20%;
@@ -757,6 +775,8 @@ body.dark {
 
 	.wb-banner__text {
 		font-size: 5vmin;
+    margin-top: 2px;
+
 	}
 
 	.wb-banner__slogan {
