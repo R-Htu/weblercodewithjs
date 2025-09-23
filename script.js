@@ -68,6 +68,8 @@ if (toggleToRegisterBtn) {
 }
 
 //(•_•)︻デ═一 → → → → BOOM! Footer canvas animation
+
+/*
 const canvas = document.getElementById('footerCanvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
@@ -111,7 +113,7 @@ function animate() {
 }
 animate();
 
-
+*/
 const darkModeToggle = document.getElementById('darkModeToggle');
 
 
